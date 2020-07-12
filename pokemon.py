@@ -99,7 +99,7 @@ class Trainer:
       # index not found
       if(type(current_pokemon) == type(str)): 
           print("Pokemon is not in list")
-          return
+          return 
 
     # checks if pokemon is knocked out
     if(self.pokemons[current_pokemon].is_knocked_out):
@@ -109,6 +109,20 @@ class Trainer:
     self.current_pokemon = current_pokemon
 
     print("{name}'s active pokemon is now {pokemon}".format(name=self.name, pokemon = self.pokemons[self.current_pokemon]))
+    
+    """ suggested code from codecademy user
+    if new_pokemon in self.pokemons:
+      if new_pokemon.is_knocked_out == False:
+        self.current_pokemon = new_pokemon
+        print("Switching to {pokemon}!".format(pokemon = new_pokemon.name))
+
+      else:
+        print("{pokemon} is knocked out, you can't switch that pokemon!".format(pokemon = new_pokemon.name))
+
+    else:
+      print("You don't own that pokemon!")  
+
+    return self.current_pokemon"""
 
 # testing!
 class Test_trainer:
